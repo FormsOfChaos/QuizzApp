@@ -1,0 +1,1012 @@
+{
+    "questions": [
+        {
+            "id": 3,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_3",
+                "text": "5. Omówić różnicę pomiędzy zanurzeniem średnim arytmetycznym i zanurzeniem podawanym na arkuszu krzywych hydrostatycznych."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_3",
+                "text": "Zanurzenie średnie arytmetyczne → Jest to średnia arytmetyczna zanurzeń statku na dziobie oraz rufie. W sytuacji, gdy odbiega ono od zanurzeń pomierzonych należy zastosować odpowiednie poprawki aby sprowadzić to zanurzenie do zanurzenia statku w pkt. “S”\nZanurzenie podane na arkuszu krzywych hydrostatycznych → Jest to zanurzenie odczytane z danych hydrostatycznych dla statku nieprzegłębionego. Inaczej nazywane zanurzenie średnie wypornościowe. Jest to zanurzenie statku w pkt. “S”."
+            }
+        },
+        {
+            "id": 4,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_4",
+                "text": "2. Wpływ wielkości wolnej burty na bezpieczeństwo statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_4",
+                "text": "Wpływ wolnej burty na bezpieczeństwo \n- zapewnia zapas pływalności na wypadek zatopienia wodoszczelnego przedziału wodą zaburtową\n- Sprawia, że mamy małą częstotliwość zalewnia pokładu przez fale\n- Zapewnia stateczność przy dużych kątach przechyłu oraz wzmacnia wytrzymałość ogólną kadłuba"
+            }
+        },
+        {
+            "id": 5,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_5",
+                "text": "3. Omówić wykres Firsowa i podać jego zastosowanie."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_5",
+                "text": "Za jego pomocą na podstawie znanych zanurzeń na rufie i dziobie można w łatwy sposób (bez obliczeń) wyznaczyć objętość podwodzia (a co za tym idzie wyporność), odciętą środka wyporu oraz rzędną metacentrum.\nwykres ten podaje objętości bez uwzględniania poszycia i deformacji kadłuba. Zaletą wykresu jest to, że nie ma znaczenia gdzie znajduje się oś obrotu statku. Przyjmujemy, że Xg=Xf."
+            }
+        },
+        {
+            "id": 6,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_6",
+                "text": "1. Podać definicje stateczności statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_6",
+                "text": "Statecznością statku nazywa się jego zdolność do przeciwstawiania się działającym na niego zewnętrznym momentom przechylającym."
+            }
+        },
+        {
+            "id": 7,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_7",
+                "text": "6. Gdzie znajduje się oś wzdłużnego obrotu statku (przegłębienia)."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_7",
+                "text": "Oś obrotu przy przegłębieniu przebiega przez punkt “S” czyli środek powierzchni wodnicy. Jest to miejsce gdzie statek pomimo przegłębienia nie zmienia zanurzenia. W dokumentacji podane jako “xs” czyli odległość do punktu “S”."
+            }
+        },
+        {
+            "id": 8,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_8",
+                "text": "7. Dlaczego początkowa wysokość metacentryczna jest miarą stateczności statycznej statku przy małych kątach przechyłu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_8",
+                "text": "Ponieważ pozwala ona w zakresach małych kątów przechyłu wyznaczyć wartość ramienia prostującego oraz momentu prostującego."
+            }
+        },
+        {
+            "id": 9,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_9",
+                "text": "8. Daczego początkowa wysokość metacentryczna może być wykorzystywana w obliczeniach stateczności tylko w zakresie małyc kątów przechyłu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_9",
+                "text": "Przy większych kątach przechyłu punkt metacentrum poprzecznego znacząco zmienia swoje położenie ( w pionie i w poprzek). Zmiany te są nieliniowe zwłaszcza podczas wchodzenia pokładu do wody. Związku z tym wartość wysokości metacentrycznej przy dużych kątach przechyłu przestaje być miarodajna w zakresie wyznaczania wartości ramienia oraz momentu prostującego statek."
+            }
+        },
+        {
+            "id": 10,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_10",
+                "text": "9. Co to jest metacentrum poprzeczne i metacentrum wzdłużne."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_10",
+                "text": "Metacentrum poprzeczne – środek krzywizny po którym przemieszcza się środek wyporu w trakcie przechylania statku (KOŁYSAŃ BOCZNYCH)\nMetacentrum wzdłużne – środek krzywizny krzywej środków wyporu w danym punkcie przy rozpatrywaniu przechyłów wzdłużnych statku (PRZYGŁĘBIENIA + PRZECHYŁY WZDŁ.)"
+            }
+        },
+        {
+            "id": 11,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_11",
+                "text": "10. Podać definicję ramienia prostującego."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_11",
+                "text": "Ramieniem prostującym GZ nazywamy odległość między linią działania siły wyporu a linią działania siły ciężkośći.\nRamię prostujące zależy od:\n-kształtu kadłuba\n-stanu załadowania statku\n-kąta przechyłu statku"
+            }
+        },
+        {
+            "id": 12,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_12",
+                "text": "11. Podać definicję ramienia stateczności kształtu. (PANTOKARENA)"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_12",
+                "text": "Ramię stateczności kształtu Lk to odległość działania siły wyporu a punktem odniesienia. Jego wartość zależy od kształtu kadłuba, zanurzenia i kąta przechyłu statku."
+            }
+        },
+        {
+            "id": 13,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_13",
+                "text": "12. Dodatkowe ramię stateczności kształtu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_13",
+                "text": "W sytuacji wystąpienia dużych kątów przechyłu > od 7 stopni w obliczeniach uwzględniamy wpływ dodatkowego ramienia stateczności kształtu. Wielkość ramienia dodatkowej stateczności kształtu zależy od kształtu części podwodnej oraz nadwodnej kadłuba i nadbudówek wodoszczelnych, od zanurzenia (a więc objętości podwodzia) i od kąta przechyłu fi. Wystąpienie tego ramienia polepsza stateczność statku."
+            }
+        },
+        {
+            "id": 14,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_14",
+                "text": "13. Co to są wykresy uniwersalne stateczności statycznej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_14",
+                "text": "Wykresy statyczne robione są dla konkretnej wyporności. Wykres jest robiony dla Zg bazowego (najmniejsza wartość Zg poprawionego jaką możemy mieć). Oś odciętych to nie fi, a sinus fi. Metoda raczej archaiczna."
+            }
+        },
+        {
+            "id": 15,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_15",
+                "text": "16. Wpływ wolnej burty na krzywą ramion prostucych."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_15",
+                "text": "Duża wolna burta zwiększa ramiona prostujące przy dużych kątach przechyłu (większych od kąta zalewania pokładu). Nie będzie miała za to wpływu na ramiona prostujące przy małych kątach przechyłu. W przypadkach, kiedy wolna burta jest niewielka, a zanurzona część kadłuba znaczna (podwodzie), przy kątach przechyłu przekraczających dodatkowo kąt wejścia krawędzi pokładu do wody - ramiona prostujące ulegają redukcji."
+            }
+        },
+        {
+            "id": 16,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_16",
+                "text": "17. Wpływ wodoszczelnej nadbdówki na krzywą ramion prostujących."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_16",
+                "text": "Wodoszczelna nadbudówka zwiększa ramiona prostujące przy dużych kątach przechyłu (przekraczających kąt wejścia nadbudówki do wody), natomiast nie wpływa na stateczność statku dla małych kątów przechyłu."
+            }
+        },
+        {
+            "id": 17,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_17",
+                "text": "18. Wpływ szerokości kadłuba na krzywą ramion prostujcych."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_17",
+                "text": "Ramiona prostujące ulegają powiększeniu w sytuacji gdy szerokość ulega zwiększeniu w stosunku do zanurzenia. Przy określonym zanurzeniu ramię stateczności statku szerokiego jest większe, niż statku wąskiego."
+            }
+        },
+        {
+            "id": 18,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_18",
+                "text": "19. Omówić korzystanie z krzywych  hydrostatycznych, gdy gęstość wody zabrtowej jest inna niż gęstość wody dla której wykonano krzywe."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_18",
+                "text": "W momencie gdy gęstość wody zaburtowej jest inna niż gęstość wody, dla której wykonano krzywe należy przeliczyć wyporność (D) na objętość (V), zgodnie ze wzorem:\nV=D/(ro*k)\nD-wyporność\nro-aktualna gęstość wody\nk -współczynnik udziału poszycia w tworzeniu wyporności\n\nKiedy krzywe hydrostatyczne nie zawierają objętości, należy przeliczyć wyporność (tak jak w draft surveyu) wg wzoru:\nD'=(D*roDH)/ro\nroDH-gęstość wody z danych hydrostatycznych\nro-aktualna gęstość wody\n\nW sytuacji gdy znane jest nam zanurzenie oraz aktualna gęstość a nie znana wyporność należy odczytać wyporność “D” odpowiadającą gęstości wody i następnie obliczyć poszukiwaną wartość ze wzoru:\nD'=(D*ro)/roDH"
+            }
+        },
+        {
+            "id": 19,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_19",
+                "text": "20. Omówić współczynnik poszycia kadłuba."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_19",
+                "text": "Współczynnik poszycia kadłuba jest to bezwymiarowy współczynnik udziału poszycia kadłuba statku w tworzeniu jego wyporności. Uwzględnia objętość poszycia kadłuba i części wystających poza obrys wynikający z linii teoretycznych (śruba napędowa, płetwa steru, stabilizatory kołysać, stępki przechyłowe itp)."
+            }
+        },
+        {
+            "id": 20,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_20",
+                "text": "21. Co uwzględnia w obliczeniach draft survey pierwsza poprawka na przegłębienie."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_20",
+                "text": "deltaD1=100*TPC*(t/Lpp)*Xs\nuwzględnia,że środek powierzchni wodnicy statku nie pogłębionego nie leży w płaszczyźnie owręża"
+            }
+        },
+        {
+            "id": 21,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_21",
+                "text": "22. Co uwzględnia w obliczeniach draft survey druga poprawka na przegłębienie."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_21",
+                "text": "deltaD2=0,5*(t^2/Lpp)*(MjT+0,5-MjT-0,5)\nuwzględnia rozchylenie na zewnątrz stewy dziobowej i rufowej statku. Jest poprawką do pierwszej poprawki na przegłębienie i jest zawsze dodatnia."
+            }
+        },
+        {
+            "id": 22,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_22",
+                "text": "24. Z jakiego warunku korzysta się przy wyznaczaniu kąta przechyłu wywołanego przez moment przechylający statek w sposób statyczny."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_22",
+                "text": "Korzystamy z warunku równości momentu przechylającego i momentu prostującego.\nMprz=Mst"
+            }
+        },
+        {
+            "id": 23,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_23",
+                "text": "25. Podać warunki osiągnięcia położenia równowagi statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_23",
+                "text": "Okręt będzie w równowadze gdy:\n-suma wszystkich działających na niego sił będzie równa 0 (siła wyporu równoważy ciężar kadłuba)\n-suma momentów tych sił względem dowolnej płaszczyzny odniesienia będzie równa 0 (linie działania sił się pokrywają)"
+            }
+        },
+        {
+            "id": 27,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_27",
+                "text": "28. Układ sił na statku przechylonym w równowadze obojętnej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_27",
+                "text": "Stan, w którym po wytrąceniu statku z położenia pionowego nie powstaje ani moment prostujący, ani przechylający – statek po ustąpieniu siły zewnętrznej pozostaje w nowym, przechylonym położeniu.\nGM=0"
+            }
+        },
+        {
+            "id": 28,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_28",
+                "text": "27. Układ sił na statku przechylonym w równowadze chwiejnej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_28",
+                "text": "Stan, w którym każde minimalne wychylenie od pionu generuje ujemny moment (moment wywracający), który powiększa przechył, prowadząc do tzw. kąta stałego przechyłu (przechyłu spoczynkowego) lub do wywrotki jednostki.\nGM<0"
+            }
+        },
+        {
+            "id": 29,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_29",
+                "text": "26. Układ sił na statku przechylonym w równowadze stałej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_29",
+                "text": "Stan, w którym po wytrąceniu statku z położenia prostego przez siłę zewnętrzną powstaje dodatni moment prostujący dążący do samoczynnego powrotu jednostki do pozycji pionowej po ustąpieniu zakłócenia.\nGM>0"
+            }
+        },
+        {
+            "id": 30,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_30",
+                "text": "29. Próba przechyłów — kiedy jest wykonywana i w jakim celu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_30",
+                "text": "Próba polega na doświadczalnym określeniu masy oraz współrzędnych środka masy statku pustego. Jest to podstawa do wyznaczenia nośności statku. Wykonywana jest po zbudowaniu statku, dołożeniu balastu stałego lub zmianie wyposażenia czy generalnym remoncie"
+            }
+        },
+        {
+            "id": 31,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_31",
+                "text": "30. Eksploatacyjna próba przechyłów — kiedy jest wykonywana i w jakim celu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_31",
+                "text": "Eksploatacyjna próba przechyłów polega na doświadczalnym określeniu masy oraz rzędnej środka masy statku w danym stanie załadowania.\nPrzeprowadzana jest przez C/O, w sytuacji gdy ma on zastrzeżenia co do dokładności parametrów stateczności wyznaczonych na drodze obliczeń."
+            }
+        },
+        {
+            "id": 32,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_32",
+                "text": "31. Metody kontroli stateczności statku w czasie jego eksploatacji."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_32",
+                "text": "Podstawowym parametrem jaki będziemy musieli sprawdzić podczas eksploatacji statku by ocenić jego stateczność jest wysokość metacentryczna GM. W celu jej wyznaczenia możemy posłużyć się okresem kołysać statku aby z jego pomocą wyznaczyć wartość GM."
+            }
+        },
+        {
+            "id": 33,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_33",
+                "text": "32. Omówić różnicę między statycznym i dynamicznym momentem przechylającym."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_33",
+                "text": "Statyczny moment przechylający od zera do wartości maksymalnej zmienia się powoli, a dynamiczny moment przechylający od samego początku działa z maksymalną swoją wartością."
+            }
+        },
+        {
+            "id": 34,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_34",
+                "text": "33. Z jakiego warunku korzysta się przy wyznaczaniu kąta przechyłu statku wywołanego przez dynamiczny moment przechylający."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_34",
+                "text": "Przy dynamicznym działaniu momentu przechylającego statek przechyla się do kąta przy którym praca wykonana przez moment prostujący równa jest pracy wykonanej przez moment przechylający."
+            }
+        },
+        {
+            "id": 35,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_35",
+                "text": "34. Omówić sposób wyznaczania kąta przechyłu statku wywołanego przez moment przechylający działający w sposób dynamiczny — na krzywej stateczności dynamicznej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_35",
+                "text": "Chodzi o spełneinie warunku równania momentów prac - wykorzystujemy wykres stateczności dynamicznej - można zrobić rysunek uwzględniający albo nieuwzględniający kołysanie na fali - będziemy szukali punktu, w którym wykres pracy przez wyporność będzie przecinał się z wykresem ramion.\n(Odpowiednio dla momentu prostującego i przechylającego)\nRysujemy wykres ramion stateczności dynamicznej (Id) w funkcji kąta przechyłu statku.\n1. Zaznaczamy amplitudę kołysań statku na fali (pa) na osi x w obie strony od początku układu współrzędnych \n2. Od zaznaczonych kątów kołysań (+-Qa) prowadzimy pionowe linie do punktów przecięcia z wykresem Id\n3. Łączymy poziomą kreską owe punkty przecięcia, tym samym odcinając część wykresu, który dotyczy kołysania statku na fali\n4. W odległości I rad od -cpa rysujemy pionową linię i odkładamy na niej od poziomej linii (z punktu 4) wartość ramienia przechylającego Iwd\n5. Od punktu przecięcia pionowej prostej idącej od -pa z wykresem Id prowadzimy prostą do końca ramienia przechylającego lwd. Punkt przecięcia tej prostej z wykresem Id zrzutowany na oś x da nam kąt przechyłu statku"
+            }
+        },
+        {
+            "id": 36,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_36",
+                "text": "35. Omówić sposób wyznaczania kąta przechyłu statku wywołanego przez moment przechylający działający w sposób dynamiczny — na krzywej stateczności statycznej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_36",
+                "text": "I. Rysuje się wykres ramion stateczności dynamicznej (Id) w funkcji kąta przechyłu statku.\n2. Zaznacza się amplitudę kołysań statku na fali - odkłada się ją na osi x w obie strony od początku układu współrzędnych.\n3. Od zaznaczonych kątów kołysań prowadzi się pionowe linie do punktów przecięcia z wykresem Id.\n4. Łączy się poziomą kreską owe punkty przecięcia, tym samym odcinając część wykresu, który dotyczy kołysania statku na fali.\n5. W odległości 1 rad od minus fi A, od poziomej linii odkładam wartość ramienia przechylającego obliczonego ze wzoru: Mprz/D.\n6. Od punktu przecięcia prostej idącej od minus fi A z wykresem ld prowadzę prostą do końca ramienia przechylającego. Punkt przecięcia tej prostej z wykresem ld zrzutowany na oś x da nam kąt przechyłu statku."
+            }
+        },
+        {
+            "id": 37,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_37",
+                "text": "36. Wpływ oblodzenia na stateczność statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_37",
+                "text": "Oblodzenie wpływa negatywnie na stateczność statku, gdyż ze względu na przyjętą dodatkową masę podnosi się środek ciężkości, co zmniejsza wysokość metacentryczną, a przy tym obniża wielkość ramienia prostującego.\n- dodatkowa masa w górnej części kadłuba\n- podniesienie Zg\n- gdy oblodzenie nie jest równomierne, występowanie Yg"
+            }
+        },
+        {
+            "id": 38,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_38",
+                "text": "37. Wpływ ładunków podwieszonych na stateczność statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_38",
+                "text": "Tak jak w przypadku swobodnych powierzchni ładunki podwieszone powodują pogorszenie stateczności statku. Ładunek podwieszony generuje dodatkowy moment przechylający. Przyjmujemy również ,że środek masy podwieszonego ładunku znajduje się w punkcie zaczepienia ciężaru (np. nok bomu). W ten sposób środek masy statku przemieszcza się w górę a co za tym idzie obniżamy wysokość metacentryczną statku, co skutkuje gorszą statecznością."
+            }
+        },
+        {
+            "id": 39,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_39",
+                "text": "38. Wpływ swobodnych powierzchni cieczy na stateczność statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_39",
+                "text": "Swobodna powierzchnia cieczy oznacza dla statku pogorszenie stateczności z powodu powstania dodatkowego momentu przechylającego. Powstaje on podczas przelewania się cieczy w zbiorniku napełnionym częściowo na burtę z której wystąpił przechył. Według obecnych przepisów \"częściowo” oznacza zapełnione poniżej 98%."
+            }
+        },
+        {
+            "id": 40,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_40",
+                "text": "39. Określenie pola i rzędnej geometrycznego środka pola powierzchni nawiewu bocznego w nietypowych stanach załadowania."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_40",
+                "text": "Moment statyczny układ pól powierzchni nawiewu liczony względem płaszczyzny jest równy sumie momentów statycznych pól składowych powierzchni składowych liczonych względem tej samej linii odniesienia."
+            }
+        },
+        {
+            "id": 41,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_41",
+                "text": "40. Dynamiczne uderzenie wiatru — jaka sytuacja jest dla statku najgorsza dla statku kołyszącego się na fali."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_41",
+                "text": "W takiej sytuacji najgorszym przypadkiem jest przechył statku na burtę nawietrzną.\nPodczas dynamicznego uderzenia wiatru oraz dodatkowego przechyłu w na burtę w trakcie kołysania statek narażony jest na duże przechyły a nawet wywrócenie."
+            }
+        },
+        {
+            "id": 42,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_42",
+                "text": "41. Omówić sposób oceny zapasu (rezerwy) stateczności statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_42",
+                "text": "Oceną rezerwy stateczności statku jest różnicą między dopuszczalną wartością parametru Zg, a jego obecną wartością wysokości środka ciężkości"
+            }
+        },
+        {
+            "id": 43,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_43",
+                "text": "42. Omówić zjawisko nadmiernej stateczności statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_43",
+                "text": "Ze zjawiskiem nadmiernej stateczności statku mamy do czynienia w sytuacji wysokiej wartości GM. Z racji wysokiej wartości GM charakterystyczny jest wysoki przyrost wartości ramion prostujących. Statki z zbyt wysoką wartością wysokości metacentrycznej na statek działa duża siła prostująca dzięki, której statek szybko powraca do położenia równowagi. W sytuacji gdy dynamiczne powroty do pozycji równowagi podczas przechyłu synchronizuje się z okresem falowania powstaje niebezpieczeństwo dużego przechyłu. Zbyt wysoka wartość GM ma zatem zły wpływ na stan kadłuba oraz niesie ryzyko dużego przechyłu."
+            }
+        },
+        {
+            "id": 44,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_44",
+                "text": "43. Wymienić sposoby tłumienia kołysania statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_44",
+                "text": "- Zbiorniki typu Flume\n- Zbiorniki typu U-Tube (Bierne lub aktywne)\n- Płetwy stabilizujące ( zawodne przy małych prędkościach)\n- Zbiorniki i stępki przechyłowe\n- Stabilizatory żyrokompasowe"
+            }
+        },
+        {
+            "id": 45,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_45",
+                "text": "44. Wymienić zagrożenia związane z zalewaniem pokładu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_45",
+                "text": "- Zalewanie pokładu nad pokładem dziobówki i zalania jej masą poruszającej się wody powoduje obciążenia konstrukcji, które często prowadzą do trwałych odkształceń oraz uszkodzeń.\n- Podczas zalewania pokładu istnieje niebezpieczeństwo zalania wnętrza statku lub uszkodzenia ładunku.\n- Gdy na pokład dostanie się duża ilość wody, mająca ograniczone możliwości spłynięcia, tworzy ona dodatkową, wysoko umieszczoną masę, pogarszającą stateczność."
+            }
+        },
+        {
+            "id": 46,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_46",
+                "text": "45. Omówić zjawisko rezonansu kołysań bocznych."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_46",
+                "text": "Rezonans kołysań bocznych występuje przy falowaniu bocznym, gdy częstość momentu wymuszającego jest równa lub bliska częstości kołysań własnych statku. W sytuacji tej energia kołysań pochodzi bezpośrednio od fali."
+            }
+        },
+        {
+            "id": 47,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_47",
+                "text": "46. Omówić zjawisko kołysań parametrycznych."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_47",
+                "text": "Przy falach przeciwnych lub nadążnych (o kącie nabiegu 180) kołysania boczne z założenia nie występują. Jednak w szczególnych warunkach, przy korelacji częstości spotkaniowej fali przeciwnej i częstości kołysań własnych statku, pojawia się kołysanie boczne statku dla fali przeciwnej (o kącie nabiegu 180). Występuje wtedy rezonans autoparametryczny lub rezonans parametryczny kołysań bocznych. Rezonans autoparametryczny polega na transporcie energii z rezonansowych ruchów innego stopnia swobody (nurzań lub kiwań) do kołysań bocznych. Rezonans parametryczny wywołany jest natomiast tylko okresowymi zmianami momentu prostującego na statek na fali."
+            }
+        },
+        {
+            "id": 48,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_48",
+                "text": "47. Co to są przyspieszenia projektowe."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_48",
+                "text": "Są to przyśpieszenia dla których ustawiany jest cały system mocowania ładunku na statku, głównie wykorzystywane na kontenerowcach. (Dla danego rzędu wartości przyspieszeń ustala się przepisową wytrzymałość urządzeń mocujących - również na statkach RORO)"
+            }
+        },
+        {
+            "id": 49,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_49",
+                "text": "48. Omówić zmiany stateczności statku na fali."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_49",
+                "text": "W momencie gdy statek znajduje się na fali, a jej grzbiet usytuowany jest w obrębie śródokręcia statku zaś doliny fali znajdują się w pobliżu dziobu i rufy to zmniejsza się wodnica pływania statku, a to zmniejsza stateczność statku. W takiej sytuacji następują zmiany w przebiegu sił tnących i momentów gnących. Dzieje się to za sprawą rozkładu wyporności spowodowanej falą, zwiększa się wygięcie gdyż na skutek zmniejszenia rzędnych wyporności na dziobie i na rufie oraz ich powiększenia w obszarze śródokręcia krzywa obciążeń wykazuje odpowiednio większe wartości rzędnych przez co następuje wcześniej wspomniane zwiększenie sił tnących i momentów gnących."
+            }
+        },
+        {
+            "id": 50,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_50",
+                "text": "49. Podać podstawowe kryteria oceny stateczności statku według kodeksu ISC."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_50",
+                "text": "- GMp > 0,15m\n- Gz dla fi>=30 >= 0,20m\n- fi GZmax >=25deg\n- A(Odeg->30deg) >= 0,55m*rad\n- A(Odeg->40deg) >= 0,9m*rad\n- A(30deg->40deg) >= 0,3m*rad\n+ pogodowe \nlw=(504*Fw*Zw)/(1000*g*D)\nlw2=1,5*lw"
+            }
+        },
+        {
+            "id": 51,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_51",
+                "text": "50. Podać znaczenie parametru dopuszczalnego / GM minimalnego."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_51",
+                "text": "Na podstawie parametru Zg dopuszczalnego możemy określić czy nas statek spełnia kryteria ISC. W przypadku kiedy jest ono większe niż Zg uzyskane przez nasz statek wiemy ,že kryteria są spełniane i nie mamy potrzeby prowadzenia dodatkowych obliczeń sprawdzających wszystkie kryteria. Z kolei mając zg dopuszczalne możemy określić nasze GM minimalne na podstawie wzoru: GM = zm-zGdop \nSłuży również do oceny rezerwy stateczności."
+            }
+        },
+        {
+            "id": 52,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_52",
+                "text": "51. Dlaczego ładunek ziarna luzem uznawany jest za niebezpieczny dla stateczności statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_52",
+                "text": "Jest uznawany za niebezpieczny dla stateczności statku z powodów jego właściwości jakimi są:\n- skłonność do przesypywania się\n- osiadanie w objętości"
+            }
+        },
+        {
+            "id": 53,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_53",
+                "text": "52. Kiedy w obliczeniach stateczności przy przewozie ziarna można nie uwzględnić ładowni zapełnionej ładunkiem ziarna."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_53",
+                "text": "Podczas obliczeń stateczności możemy nie uwzględnić zapełnionej ładowni w sytuacji, kiedy powierzchnia ziarna jest zabezpieczona przed przesypywaniem."
+            }
+        },
+        {
+            "id": 54,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_54",
+                "text": "53. Omówić zagadnienie trymowania ziarna."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_54",
+                "text": "Jeżeli ładownia będzie samotrymująca to mamy roztrymować tak, aby zapełnić ładownie w jak największym stopniu - jeżeli mamy dodatkowo zabezpieczyć powierzchnie, to przy samych grodziach lądunek powinien nie być do końca roztrymowany - powinien być spadek przy samych grodziach podziałowych"
+            }
+        },
+        {
+            "id": 55,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_55",
+                "text": "54. Podać metody uwzględniania, w obliczeniach stateczności statku przewożącego ziarno luzem, pionowego przemieszczenia ładunku ziarna w przypadku jego przesypania się."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_55",
+                "text": "-1 polega na założeniu, ,że rzędna środka masy ładunku w ładowni niezależnie od stopnia jej zapełnienia jest równa rzędnej geometrycznego środka całej ładowni. (Nie stosowana)\n- 2  w skalowaniu ładowni umieszczane są dwie krzywe rzędnych środków objętości. Jedna z nich jest dla ładunków, które się nie przesypują a druga dla tych przesypujących się.\n- 3 Przyjmujemy do obliczeń moment przechylający od przesypwania się ziarna powiększony 0 12% w przypadku zapełnienia częściowego oraz 6% w przypadku przedziałów zapełnionych początkowo całkowicie"
+            }
+        },
+        {
+            "id": 56,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_56",
+                "text": "56. Podać kryteria oceny stateczności statku przewożącego ziarno luzem"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_56",
+                "text": "Ocena stateczności statku przy przewozie ziarna luzem (Grain Code)\nstatek posiadający dokumentację do przewozu ziarna\n1. Statek na wyjście w morze musi być w pozycji wyprostowanej (bez przechyłu).\tYG=0\n2. Początkowa, poprzeczna, wysokość metacentryczna, poprawiona o wpływ\nGM 20.30m swobodnych powierzchni cieczy, powinna być nie mniejsza niż 0.30 m.\n3. Kąt przechyłu wywołany przesypaniem się ziarna, nie może być większy niż 12deg\n4. Pole powierzchni pomiędzy krzywą ramion prostujących oraz krzyvvą ramienia momentu przechylającego od przesypania się ziarna, powinno być nie mniejsze niż 0.075 mrad. Przy czym, pole to mierzy się do najmniejszego z następujących kątów: 40deg lub kąta zalewania wnętrza kadłuba lub kąta maksymalnej różnicy pomiędzy rzędnymi Obu wykresów.\nW przypadku planowania załadunku można to wykonać również w sposób uproszczony, odczytując z dokumentacji dopuszczalny moment przesypywania się ziarna oraz porównanie go z momentem obliczonym."
+            }
+        },
+        {
+            "id": 57,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_57",
+                "text": "58. Omówić wielkości analizowane w eksploatacji statku w zakresie wytrzymałości ogólnej i lokalnej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_57",
+                "text": "Wytrzymałość ogólna kadłuba możemy podzielić na wzdłużną oraz poprzeczną, gdzie:\n- wzdłużna - siły oraz momenty pionowe, poziome oraz skręcające.\n- poprzeczna - dotyczy odporności elementów konstrukcyjnych umieszczonych w płaszczyznach poprzecznych kadłuba oraz współpracujących z nimi elementów wzdłużnych na działanie sił ciśnienia wody oraz siły masowych pochodzących od konstrukcji i kadłuba.\nNa statku występują również obciążenia działające bezpośrednio na rozpatrywany fragment konstrukcji np. ładowanie, międzypokłady. Wpływ takich obciążeń na fragment konstrukcji jest przedmiotem wytrzymałości miejscowej (lokalnej)."
+            }
+        },
+        {
+            "id": 58,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_58",
+                "text": "59. Wytrzymałość ogólna kadłuba — omówić pojęcie: przekroje niebezpieczne."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_58",
+                "text": "Przekroje niebezpieczne są to miejsca w których występują extrema sił tnących i momentów gnących. Dla sił tnących są to grodzia z kolei dla momentów gnących połowy długości ładowni."
+            }
+        },
+        {
+            "id": 59,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_59",
+                "text": "62. Podać pozytywne i negatywne cechy stanów naprzemiennego załadunku masowca (ładownie pełna/pusta)."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_59",
+                "text": "- pozytywne - podniesienie środka ciężkości, zmniejszenie okresu kołysań\n- negatywne- pojawienie się znacznych sił tnących, których wartości ekstremalne występują w płaszczyznach poszczególnych grodzi."
+            }
+        },
+        {
+            "id": 60,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_60",
+                "text": "63. Podać najprostszą zasadę zmniejszenia maksymalnego momentu gnącego kadłub."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_60",
+                "text": "W przypadku gdy mamy do czynienia z momentem gnącym kadłub typu sagging powinniśmy przesunąć masę ze śródokręcia w stronę rufy i dziobu. Możemy również usunąć część masy ze śródokręcia. W przypadku hoggingu sytuacja jest odwrotna"
+            }
+        },
+        {
+            "id": 61,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_61",
+                "text": "66. W jaki sposób zapewnia się niezatapialność statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_61",
+                "text": "- właściwa eksploatacja statku,\n- właściwe postępowanie po wystąpieniu awarii,\n- analiza różnych wariantów zatapiania wnętrza statku wykonywana na etapie jego projektowania,\n- zapewnienie odpowiedniej stateczności statku w stanie nieuszkodzonym: ZGDOP ze względu na stateczność awaryjną\n- wprowadzenie odpowiednich wymagań dotyczących budowy i eksploatacji poszczególnych typów statków: konwencje, IACS, przepisy klasyfikatorów\n- rozwiązania konstrukcyjne\n- systemy wspomagające utrzymanie stateczności statku po wystąpieniu awarii"
+            }
+        },
+        {
+            "id": 62,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_62",
+                "text": "67. Co to są współczynniki zatapialności przedziału oraz nasiąkliwości ładunku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_62",
+                "text": "współczynnik zatapialności przedziału - określa stosunek objetości wody w przedziale do całkowitej objętości przedziału\nwspółczynnik nasiąkliwości ładunku - określa jaka część objętości zajętej przez ładunek zostanie wypełniona woda w razie jej zatopienia"
+            }
+        },
+        {
+            "id": 63,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_63",
+                "text": "68. Omówić pojęcia: pokład grodziowy, linia graniczna, pokład wolnej burty."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_63",
+                "text": "- pokład grodziowy - jest to najwyższy pokład do którego doprowadzone są poprzeczne grodzie wodoszczelne dzielące statek na przedziały. Pokład ten nie musi być pokładem ciągłym.\n - Linia graniczna - jest to linia położona 3 cale poniżej pokładu grodziowego. Zakłada się że statek zachowuje pływalność jeżeli zanurzy się nie bardziej niż do linii granicznej.\n - Pokład wolnej burty - pokład ciągły do którego doprowadzane są wszystkie grodzie wodoszczelne statku"
+            }
+        },
+        {
+            "id": 64,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_64",
+                "text": "69. Co to jest krzywa grodziowa i jakie parametry mają na nią wpływ."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_64",
+                "text": "Jest to krzywa maksymalnych długości przedziałów zatopienie których spowoduje zanurzenie statku do linii granicznej. Służy ona do planowania i kontroli rozmieszczenia poprzecznych grodzi wodoszczelnych. Na krzywą grodziową ma wpływ wodnica podziałowa odpowiadająca maksymalnej dopuszczalnej wartości zanurzenia."
+            }
+        },
+        {
+            "id": 65,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_65",
+                "text": "70. Wymienić kategorie zatopionych przedziałów."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_65",
+                "text": "1. Przedział jest zatopiony całkowicie, brak swobodnych powierzchni cieczy.\n2. Przedział jest zatopiony częściowo, występują swobodne powierzchni cieczy, ilość wody w przedziale praktycznie nie zmienia się w czasie. \n3. Przedział jest zatopiony częściowo, występują swobodne powierzchni cieczy, ilość wody w przedziale zmienia się w czasie (na skutek ruchu statku na fali oraz falowania akwenu)."
+            }
+        },
+        {
+            "id": 66,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_66",
+                "text": "71. Podać metody obliczeń stateczności awaryjnej oraz zakres ich stosowania."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_66",
+                "text": "- Metoda przyjętej masy, wykorzystujemy ją w przypadku wystąpienia kategorii 1 oraz 2 zatopionych przedziałów.\n- Metoda stałej wyporności (metoda utraconej wyporności), wykorzystujemy ją w przypadku wystąpienia kategorii 3 zatopionych przedziałów."
+            }
+        },
+        {
+            "id": 67,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_67",
+                "text": "72. Stateczność awaryjna - omówić metodę przyjętego ciężaru."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_67",
+                "text": "Metodę tę wykorzystamy przy kategoriach zatopienia przedziałów 1 i 2. Jest mniej dokładna i nie korzystają z niej projektanci, ale jest wykorzystywana na zajęciach, ponieważ nie wymaga zastosowania osobnych danych hydrostatycznych"
+            }
+        },
+        {
+            "id": 68,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_68",
+                "text": "74. Omówić metodę wyznaczania zanurzeń statku po awarii."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_68",
+                "text": "przyjmujemy uproszczenie, że w wyniku awarii statek zwiększył swoje zanurzenie o wartość deltaT, przy czym jego przegłębienie  pozostało bez zmian. Utracona objetość podwodzia Vu do poziomu wodnicy statku sprzed awarii zostaje zastąpiona objętością uzyskaną wraz ze wzrostem zanurzenia."
+            }
+        },
+        {
+            "id": 69,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_69",
+                "text": "76. Podać znaczenie parametru ZG dopuszczalnego ze względu na stateczność awaryjną"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_69",
+                "text": "Jest to parametr wynikający z obliczeń w sferze projektowania niezatapialności awaryjnej statku.Wynika z analizy w trakcie projektowania statku. Parametr ma za zadanie zapewnić minimalne parametry w awarii w stosunku do układów analizowanych w czasie projektowania statku."
+            }
+        },
+        {
+            "id": 70,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_70",
+                "text": "77. Statek na mieliźnie - omówić sposoby określania reakcji gruntu."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_70",
+                "text": "Wyznaczenie reakcji gruntu odbywa się przy wykorzystaniu wzoru R = Dm - D\nDo wyznaczenia Dm czyli wyporności statku możemy wykorzystać następujące metody:\n- Skala Bonjean'a\n- Wykres Firsowa\n- Draft Survey - metoda ta nie jest zbyt dokładna"
+            }
+        },
+        {
+            "id": 71,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_71",
+                "text": "78. Ocena stateczności statku podpartego."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_71",
+                "text": "Do oceny wyznacza się parametr GMmp = ZMm - Zgmp"
+            }
+        },
+        {
+            "id": 72,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_72",
+                "text": "79. Podać warunek samodzielnego zejścia statku z mielizny."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_72",
+                "text": "- Statek samodzielnie zejdzie z mielizny jeżeli zmiana zanurzenia w punkcie podparcia, wywołana zdjęciem, przyjęciem lub przemieszczeniem mas na statku będzie większa niż zmiana zanurzenia w punkcie podparcia wywołana wejściem na mieliznę\n- Statek samodzielnie zejdzie mielizny jeżeli zanurzenie w punkcie podparcia, pa zdjęciu, przyjęciu lub przemieszczeniu mas na statku będzie mniejsze niż zanurzenie w punkcie podparcia statku na mieliźnie."
+            }
+        },
+        {
+            "id": 73,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_73",
+                "text": "82. Omówić zmiany stateczności statku w trakcie samodzielnego schodzenia z mielizny — w trakcie „wyrzucania” wody ze zbiorników balastowych."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_73",
+                "text": "Będąc na mieliźnie wyrzucanie balastu zwiększa stateczność statku. Należy je jednak wyrzucać w taki sposób aby redukować reakcje gruntu. W zależności od reakcji i od punktu podparcia mniejszą masę musielibyśmy wyrzucić ze zbiorników balastowych będących blisko punktu podparcia niż w przypadku zbiorników oddalonych od tego punktu."
+            }
+        },
+        {
+            "id": 74,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_74",
+                "text": "83. Omówić zmiany stateczności statku podczas dokowania."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_74",
+                "text": "Podczas dokowania stateczność statku ulega pogorszeniu. W pierwszym etapie kiedy statek opiera się na podporze rufowej zwiększa się wartość reakcji a co za tym idzie dalszy spadek stateczności aż do momentu krytycznego w którym statek na chwilę traci stateczność. Podczas dokowania należy zatem kontrolować parametr GMkr, które powinno być dodatnie."
+            }
+        },
+        {
+            "id": 75,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_75",
+                "text": "84. Kiedy podczas dokowania statku będzie występowała maksymalna wartość reakcji na podporze rufowej."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_75",
+                "text": "Maksymalną wartość reakcji otrzymamy na chwile przed tym zanim statek zacznie opierać się na pozostałych podporach. Maksymalna wartość reakcji wystąpi gdy rufa pierwsza oprze się na podporze a przegłębienie będzie zbiegać do zera."
+            }
+        },
+        {
+            "id": 76,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_76",
+                "text": "85. Co to jest zanurzenie krytyczne podczas dokowania statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_76",
+                "text": "Jest to zanurzenie w okresie czasu pomiędzy momentem gdy stek podeprze się na podporze rufowej, a jeszcze przed momentem gdy całą reszta kadłuba osiądzie na reszcie podpór. W tym momencie będziemy osiągali maksymalną reakcję na podporze rufowej i najgorszą stateczność."
+            }
+        },
+        {
+            "id": 77,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_77",
+                "text": "86. Podać zagadnienia wchodzące w zakres właściwości morskich statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_77",
+                "text": "- Kołysania statku na fali regularnej\n- kołysanie boczne\n- slamming\n- obciążenia dynamiczne kadłuba statku i ładunku"
+            }
+        }
+    ]
+}

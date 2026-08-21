@@ -1,0 +1,74 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_1",
+                "text": "ale"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_1",
+                "text": "urwał"
+            }
+        },
+        {
+            "id": 2,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_2",
+                "text": "super"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_2",
+                "text": "duper"
+            }
+        },
+        {
+            "id": 3,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_3",
+                "text": "kolego"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_3",
+                "text": "chodź tu"
+            }
+        },
+        {
+            "id": 4,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_4",
+                "text": "śmieszne"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_4",
+                "text": "żarty"
+            }
+        },
+        {
+            "id": 5,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_5",
+                "text": "jaba"
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_5",
+                "text": "daba"
+            }
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "questions": [
+        {
+            "id": 43,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_43",
+                "text": "42. Omówić zjawisko nadmiernej stateczności statku."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_43",
+                "text": "Ze zjawiskiem nadmiernej stateczności statku mamy do czynienia w sytuacji wysokiej wartości GM. Z racji wysokiej wartości GM charakterystyczny jest wysoki przyrost wartości ramion prostujących. Statki z zbyt wysoką wartością wysokości metacentrycznej na statek działa duża siła prostująca dzięki, której statek szybko powraca do położenia równowagi. W sytuacji gdy dynamiczne powroty do pozycji równowagi podczas przechyłu synchronizuje się z okresem falowania powstaje niebezpieczeństwo dużego przechyłu. Zbyt wysoka wartość GM ma zatem zły wpływ na stan kadłuba oraz niesie ryzyko dużego przechyłu."
+            }
+        },
+        {
+            "id": 50,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_50",
+                "text": "49. Podać podstawowe kryteria oceny stateczności statku według kodeksu ISC."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_50",
+                "text": "- GMp > 0,15m\n- Gz dla fi>=30 >= 0,20m\n- fi GZmax >=25deg\n- A(Odeg->30deg) >= 0,55m*rad\n- A(Odeg->40deg) >= 0,9m*rad\n- A(30deg->40deg) >= 0,3m*rad\n+ pogodowe \nlw=(504*Fw*Zw)/(1000*g*D)\nlw2=1,5*lw"
+            }
+        },
+        {
+            "id": 72,
+            "topic": "Manual Entry",
+            "difficulty": "medium",
+            "question": {
+                "question_id": "q_72",
+                "text": "79. Podać warunek samodzielnego zejścia statku z mielizny."
+            },
+            "options": [],
+            "correct_answer": {
+                "answer_id": "a_72",
+                "text": "- Statek samodzielnie zejdzie z mielizny jeżeli zmiana zanurzenia w punkcie podparcia, wywołana zdjęciem, przyjęciem lub przemieszczeniem mas na statku będzie większa niż zmiana zanurzenia w punkcie podparcia wywołana wejściem na mieliznę\n- Statek samodzielnie zejdzie mielizny jeżeli zanurzenie w punkcie podparcia, pa zdjęciu, przyjęciu lub przemieszczeniu mas na statku będzie mniejsze niż zanurzenie w punkcie podparcia statku na mieliźnie."
+            }
+        }
+    ]
+}

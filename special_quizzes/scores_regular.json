@@ -1,0 +1,26 @@
+{
+    "Multiple Choice": {
+        "superduper.json": [
+            {
+                "correct": 3,
+                "total": 5
+            },
+            {
+                "correct": 3,
+                "total": 5
+            }
+        ]
+    },
+    "Handwritten Input": {
+        "superduper.json": [
+            {
+                "correct": 5,
+                "total": 6
+            },
+            {
+                "correct": 3,
+                "total": 5
+            }
+        ]
+    }
+}

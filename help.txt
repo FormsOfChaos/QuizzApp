@@ -1,0 +1,22 @@
+=== DYNAMIC EVALUATION SUITE - HELP & FEATURES ===
+
+1. FILE MANAGEMENT
+- Select JSON Bank: Choose your question database from the dropdown. Place .json files in the 'Questions Database' folder.
+- Regular Mode: Play the standard quiz.
+- Hard Mode: Automatically generated quiz focusing on questions you answered incorrectly in the past.
+- Redemption Mode: A special mode for questions you consistently struggle with.
+- Self Made Mode: Play your custom playlist of manually selected questions.
+
+2. ANSWERING MODES
+- Multiple Choice: Standard 4-option quiz.
+- Handwritten Input: Type your answer manually. The app will verify your spelling and highlight exact character mistakes.
+
+3. UTILITIES
+- View Scores: Track your overall performance, accuracy, and average scores per bank and game mode.
+- Open Quiz Builder: A dedicated tool to create, edit, and manage your custom JSON question banks.
+- Open Questions: View the entire loaded database. Features Search (Ctrl+F or 🔍 Search) and Zoom (Ctrl + Scroll).
+
+4. IN-GAME FEATURES
+- Intensity Selection: Choose to play 30%, 60%, 80%, or 100% of the loaded questions.
+- Self Made Playlist: Check the box during a quiz to save a question to your custom Self Made list for later practice.
+- Error Highlighting: If you make a mistake, a popup will show you the exact correct answer.
