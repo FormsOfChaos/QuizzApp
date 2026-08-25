@@ -67,7 +67,7 @@ class QuizApp(ctk.CTk):
         self.mode_label.pack(pady=(0, 5))
         
         self.mode_var = ctk.StringVar(value="Multiple Choice")
-        self.mode_switch = ctk.CTkOptionMenu(self.config_panel, variable=self.mode_var, values=["Multiple Choice", "Handwritten Input"], command=self.toggle_mode_view)
+        self.mode_switch = ctk.CTkOptionMenu(self.config_panel, variable=self.mode_var, values=["Multiple Choice", "Handwritten Input", "Fill the Gaps"], command=self.toggle_mode_view)
         self.mode_switch.pack(pady=10, fill="x", padx=10)
 
         self.builder_separator = ctk.CTkFrame(self.config_panel, height=2, fg_color="gray")
@@ -136,6 +136,7 @@ class QuizApp(ctk.CTk):
             self.option_buttons.append(card)
 
         self.text_frame = ctk.CTkFrame(self.game_frame, fg_color="transparent")
+        self.gaps_hint_label = ctk.CTkLabel(self.text_frame, text="", font=("Segoe UI", 16, "bold"), text_color="white", wraplength=850)
         self.handwritten_entry = ctk.CTkTextbox(self.text_frame, height=100, wrap="word", font=("Segoe UI", 14))
         self.handwritten_entry.pack(pady=5, fill="x")
         self.handwritten_entry.bind("<Return>", self.on_enter_pressed)
@@ -225,14 +226,16 @@ class QuizApp(ctk.CTk):
         btn = ctk.CTkButton(popup, text="Understood", command=popup.destroy)
         btn.pack(pady=5)
 
-    def show_correction_popup(self, correct_text, analysis=None):
+    def show_correction_popup(self, correct_text, analysis=None, is_passed=False):
         popup = ctk.CTkToplevel(self)
         popup.title("Incorrect Answer")
         popup.geometry("980x650") # 🟢 Zwiększona wysokość, by pomieścić nowy element
         popup.transient(self)
         popup.grab_set()
 
-        title_lbl = ctk.CTkLabel(popup, text="Incorrect!", font=("Segoe UI", 24, "bold"), text_color="red")
+        t_text = "Accepted with Typos!" if is_passed else "Incorrect!"
+        t_color = "#3abf70" if is_passed else "red"
+        title_lbl = ctk.CTkLabel(popup, text=t_text, font=("Segoe UI", 24, "bold"), text_color=t_color)
         title_lbl.pack(pady=(20, 5))
         
         # 🟢 NOWE: Fuzja Spellcheckera do Pop-upa
@@ -312,6 +315,7 @@ class QuizApp(ctk.CTk):
         self.question_label.pack(pady=20)
         
         self.clear_highlights()
+        self.handwritten_entry.configure(state="normal")
         self.handwritten_entry.delete("1.0", 'end')
         self.logic.reset_quiz()
         self.lock_choices()
@@ -349,6 +353,10 @@ class QuizApp(ctk.CTk):
                 raw_data = json.load(f)
                 
             q_list = raw_data.get("questions", []) if isinstance(raw_data, dict) else raw_data
+            
+            # --- DODANE ZABEZPIECZENIE: Wymuszamy oryginalne sortowanie według ID ---
+            # Jeśli element ma id, sortuje numerycznie. Jeśli nie, zostawia go na końcu.
+            q_list = sorted(q_list, key=lambda x: int(x.get("id", 999999)) if str(x.get("id", "")).isdigit() else 999999)
             
             qa_pairs = []
             for q_obj in q_list:
@@ -428,6 +436,7 @@ class QuizApp(ctk.CTk):
         self.clear_highlights()
         self.choice_frame.pack_forget()
         self.text_frame.pack_forget()
+        self.handwritten_entry.configure(state="normal")
         self.handwritten_entry.delete("1.0", 'end')
         self.next_btn.pack_forget() 
         self.self_made_checkbox.pack_forget()
@@ -566,7 +575,22 @@ class QuizApp(ctk.CTk):
                 border_width=0 
             )
             
-            self.handwritten_entry.pack(pady=(60, 15), padx=150, fill="both", expand=True)
+            # --- PODMIENIONY BLOK PACKOWANIA ---
+            if self.mode_var.get() == "Fill the Gaps":
+                ans_data = current_q.get("correct_answer", "")
+                correct = str(ans_data.get("text", "")) if isinstance(ans_data, dict) else str(ans_data)
+                gapped = self.logic.generate_gapped_text(correct)
+                
+                # Ustawiamy tekst podpowiedzi i ją pokazujemy
+                self.gaps_hint_label.configure(text=gapped)
+                self.gaps_hint_label.pack(before=self.handwritten_entry, pady=(10, 15), fill="x", padx=100) 
+                
+                # Zmniejszamy górny margines TextBoxa z 60 na 0, bo nad nim jest podpowiedź
+                self.handwritten_entry.pack(pady=(0, 15), padx=150, fill="both", expand=True) 
+            else:
+                self.gaps_hint_label.pack_forget() # W zwykłym trybie chowamy podpowiedź
+                self.handwritten_entry.pack(pady=(60, 15), padx=150, fill="both", expand=True) # Stary, duży margines
+            # ------------------------------------
             
             self.text_submit_btn.configure(font=("Segoe UI", 16, "bold"), height=45, width=200)
             self.text_submit_btn.pack(pady=10)
@@ -578,6 +602,7 @@ class QuizApp(ctk.CTk):
             
             self.next_btn.configure(width=250, height=50, font=("Segoe UI", 16, "bold"))
             self.next_btn.pack(in_=self.game_frame, anchor="center", pady=10)
+            
 
     def submit_choice(self, index):
         if getattr(self, 'choice_locked', False):
@@ -628,16 +653,23 @@ class QuizApp(ctk.CTk):
         norm_user = self.normalize_for_comparison(user_text)
         norm_correct = self.normalize_for_comparison(correct)
 
-        # --- NOWE: Fuzzy Matching ---
+        # --- fuzzy matching---
         import difflib
         similarity = difflib.SequenceMatcher(None, norm_user, norm_correct).ratio()
         
-        # Próg tolerancji: 0.85 oznacza, że program wybaczy do 15% błędów w tekście
         THRESHOLD = 0.85
         is_fuzzy_match = similarity >= THRESHOLD
 
         is_first_try = not getattr(self, 'current_question_attempted', False)
         self.current_question_attempted = True
+
+        # ZAWSZE generujemy analizę błędów, jeśli odpowiedź nie jest w 100% idealna
+        analysis = None
+        if norm_user != norm_correct:
+            if self.mode_var.get() == "Fill the Gaps":
+                analysis = self.logic.check_word_mistake(norm_user, norm_correct)
+            else:
+                analysis = self.logic.check_handwritten_mistake(norm_user, norm_correct)
 
         if is_fuzzy_match:
             if is_first_try:
@@ -645,24 +677,22 @@ class QuizApp(ctk.CTk):
                 self.logic.session_correct += 1
                 self.logic.log_question_success(current_q, self.mode_var.get(), self.active_quiz_path, self.bank_var.get())
             
-            # Dodatkowy bajer: informuje, jeśli odpowiedź zaliczono pomimo literówki
             if similarity < 1.0:
                 self.feedback_label.configure(text=f"Accepted with minor typos! ({int(similarity*100)}% match)", text_color="green")
+                # Wymuszamy popup, żeby pokazać błąd, ale oznaczamy go jako zaliczony
+                self.show_correction_popup(correct, analysis=analysis, is_passed=True)
             else:
                 self.feedback_label.configure(text="Perfect match!", text_color="green")
                 
             self.next_btn.configure(state="normal")
             self.handwritten_entry.configure(state="disabled") 
         else:
-            # Jeśli błąd jest zbyt duży, robimy starą analizę do pop-upa
-            analysis = self.logic.check_handwritten_mistake(norm_user, norm_correct)
-            
             if is_first_try:
                 self.logic.session_total += 1
                 self.logic.log_question_failure(current_q, self.mode_var.get(), self.bank_var.get())
                 
             self.feedback_label.configure(text=f"Incorrect! Too many typos ({int(similarity*100)}% match)", text_color="red")
-            self.show_correction_popup(correct, analysis=analysis) 
+            self.show_correction_popup(correct, analysis=analysis, is_passed=False) 
             self.next_btn.configure(state="normal")
             self.handwritten_entry.configure(state="disabled") 
 
@@ -673,11 +703,15 @@ class QuizApp(ctk.CTk):
     def update_score_mode_buttons_ui(self, active_mode):
         self.score_mc_btn.configure(fg_color="#3a7ebf", border_width=0)
         self.score_wr_btn.configure(fg_color="#3a7ebf", border_width=0)
+        if hasattr(self, 'score_fg_btn'):
+            self.score_fg_btn.configure(fg_color="#3a7ebf", border_width=0)
         
         if active_mode == "Multiple Choice":
             self.score_mc_btn.configure(fg_color="#1f538d", border_width=2, border_color="white")
         elif active_mode == "Handwritten Input":
             self.score_wr_btn.configure(fg_color="#1f538d", border_width=2, border_color="white")
+        elif active_mode == "Fill the Gaps" and hasattr(self, 'score_fg_btn'):
+            self.score_fg_btn.configure(fg_color="#1f538d", border_width=2, border_color="white")
 
     def show_scores_screen(self):
         if hasattr(self, 'welcome_frame'):
@@ -710,6 +744,9 @@ class QuizApp(ctk.CTk):
         
         self.score_wr_btn = ctk.CTkButton(btn_frame, text="Written Input", command=lambda: self.load_score_answering_mode("Handwritten Input"))
         self.score_wr_btn.pack(side="right", expand=True, padx=10)
+
+        self.score_fg_btn = ctk.CTkButton(btn_frame, text="Fill the Gaps", command=lambda: self.load_score_answering_mode("Fill the Gaps"))
+        self.score_fg_btn.pack(side="left", expand=True, padx=10)
         
         self.score_content_frame = ctk.CTkFrame(self.scores_frame, fg_color="transparent")
         self.score_content_frame.pack(fill="both", expand=True, pady=10, padx=20)
@@ -1049,8 +1086,13 @@ class QuizApp(ctk.CTk):
 
     def on_closing(self):
         # Odpalane przy kliknięciu "X" na oknie
-        self.save_current_game_state()
-        self.destroy()
+        try:
+            self.save_current_game_state()
+        except:
+            pass # Ignorujemy błędy przy zamykaniu, najważniejsze to wyłączyć aplikację
+        finally:
+            self.quit()    # 1. Zabija proces w tle (znika z Menedżera Zadań)
+            self.destroy() # 2. Niszczy okno
 
     def check_resume_or_continue(self, path, new_game_callback):
         saved = self.logic.load_saved_state()
@@ -1080,13 +1122,16 @@ class QuizApp(ctk.CTk):
             new_game_callback()
 
     def resume_saved_game(self, saved_data):
-        self.logic.questions = saved_data["questions"]
+        import copy # <--- DODANY IMPORT DO GŁĘBOKIEJ KOPII
+        
+        # --- ZABEZPIECZENIE: Tworzymy izolowaną kopię w pamięci ---
+        self.logic.questions = copy.deepcopy(saved_data["questions"])
+        
         self.logic.current_question_index = saved_data["current_index"]
         self.logic.session_correct = saved_data["session_correct"]
         self.logic.session_total = saved_data["session_total"]
         self.logic.session_missed = saved_data["session_missed"]
         
-        # Czyszczenie ekranów, jeśli jakieś wiszą
         if hasattr(self, 'intensity_container') and self.intensity_container.winfo_exists():
             self.intensity_container.destroy()
         if hasattr(self, 'self_made_intro_container') and self.self_made_intro_container.winfo_exists():
@@ -1094,7 +1139,6 @@ class QuizApp(ctk.CTk):
             
         self.display_question()
         
-        # Odtwarzanie wpisanego tekstu z klawiatury
         typed_text = saved_data.get("typed_text", "")
         if self.mode_var.get() == "Handwritten Input" and typed_text:
             self.handwritten_entry.insert("1.0", typed_text)

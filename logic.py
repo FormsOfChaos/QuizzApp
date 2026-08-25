@@ -161,8 +161,7 @@ class QuizLogic:
 
     def log_question_failure(self, current_q, mode_str, base_bank_file):
         import os, json
-        suffix = "mc" if mode_str == "Multiple Choice" else "written"
-        
+        suffix = self.get_mode_suffix(mode_str)        
         # 🟢 NOWE: Wyciągamy nazwę bazową quizu, żeby plik Hard Mode był unikalny dla niego
         base_name = os.path.basename(base_bank_file).replace(".json", "") if base_bank_file else "unknown"
         path = f"special_quizzes/hard_mode_{suffix}_{base_name}.json"
@@ -211,7 +210,7 @@ class QuizLogic:
         if not q_id:
             return
             
-        suffix = "mc" if mode_str == "Multiple Choice" else "written"
+        suffix = self.get_mode_suffix(mode_str)
         # 🟢 NOWE: Unikalne nazwy dla Redemption Mode
         base_name = os.path.basename(base_bank_file).replace(".json", "") if base_bank_file else "unknown"
         
@@ -330,12 +329,12 @@ class QuizLogic:
                 with open(cat_path, 'r', encoding='utf-8') as f:
                     return json.load(f)
             except: pass
-        return {"Multiple Choice": {}, "Handwritten Input": {}}
+        return {"Multiple Choice": {}, "Handwritten Input": {}, "Fill the Gaps": {}}
 
     def get_self_made_path(self, mode_str, base_bank_file):
         import os
         base_name = os.path.basename(base_bank_file).replace(".json", "") if base_bank_file else "unknown"
-        suffix = "mc" if mode_str == "Multiple Choice" else "written"
+        suffix = self.get_mode_suffix(mode_str)
         return f"special_quizzes/self_made_{suffix}_{base_name}.json"
 
     def toggle_self_made(self, current_q, mode_str, base_bank_file, is_checked):
@@ -391,7 +390,7 @@ class QuizLogic:
     def save_custom_playlist(self, playlist_name, base_bank_file, mode_str, selected_questions):
         import os, json
         base_name = os.path.basename(base_bank_file).replace(".json", "") if base_bank_file else "unknown"
-        suffix = "mc" if mode_str == "Multiple Choice" else "written"
+        suffix = self.get_mode_suffix(mode_str)
         
         # Filtrujemy nazwę z niedozwolonych znaków dla plików
         safe_name = "".join([c for c in playlist_name if c.isalnum() or c in " _-"]).strip()
@@ -407,7 +406,7 @@ class QuizLogic:
     def get_custom_playlists(self, mode_str, base_bank_file):
         import os
         base_name = os.path.basename(base_bank_file).replace(".json", "") if base_bank_file else "unknown"
-        suffix = "mc" if mode_str == "Multiple Choice" else "written"
+        suffix = self.get_mode_suffix(mode_str)
         folder = "special_quizzes/custom_playlists"
         if not os.path.exists(folder): return []
         
@@ -418,9 +417,87 @@ class QuizLogic:
                 p_name = f.replace(suffix_search, "")
                 playlists.append((p_name, os.path.join(folder, f)))
         return playlists
-        
+    
     def delete_custom_playlist(self, path):
         import os
         if os.path.exists(path):
             try: os.remove(path)
             except: pass
+
+    # ==========================================
+    # SAVE & RESUME STATE LOGIC
+    # ==========================================
+    def save_current_state(self, mode_str, file_path, typed_text=""):
+        import os, json
+        # Nie zapisujemy, jeśli quiz się skończył lub w ogóle nie wystartował
+        if not hasattr(self, 'questions') or not self.questions or self.current_question_index >= len(self.questions):
+            self.clear_saved_state()
+            return
+            
+        save_data = {
+            "mode": mode_str,
+            "file_path": file_path,
+            "questions": self.questions,
+            "current_index": self.current_question_index,
+            "session_correct": self.session_correct,
+            "session_total": self.session_total,
+            "session_missed": self.session_missed,
+            "typed_text": typed_text
+        }
+        try:
+            with open("special_quizzes/save_state.json", 'w', encoding='utf-8') as f:
+                json.dump(save_data, f, indent=4, ensure_ascii=False)
+        except: pass
+
+    def load_saved_state(self):
+        import os, json
+        path = "special_quizzes/save_state.json"
+        if not os.path.exists(path): return None
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except: return None
+        
+    def clear_saved_state(self):
+        import os
+        path = "special_quizzes/save_state.json"
+        if os.path.exists(path):
+            try: os.remove(path)
+            except: pass
+
+    def get_mode_suffix(self, mode_str):
+        if mode_str == "Multiple Choice": return "mc"
+        elif mode_str == "Handwritten Input": return "written"
+        else: return "gaps"
+
+    def generate_gapped_text(self, text, ratio=0.7, min_len=4):
+        import re, random
+        # Wyciąga słowa bez znaków interpunkcyjnych
+        words = re.findall(r'\b\w+\b', text)
+        valid_words = list(set([w for w in words if len(w) >= min_len]))
+        
+        num_to_remove = int(len(valid_words) * ratio)
+        if num_to_remove == 0 and valid_words: num_to_remove = 1
+        words_to_remove = random.sample(valid_words, min(num_to_remove, len(valid_words)))
+        
+        gapped_text = text
+        for w in words_to_remove:
+            # Podmienia całe słowa na odpowiednią liczbę podłóg
+            gapped_text = re.sub(rf'\b{w}\b', '_' * len(w), gapped_text)
+        return gapped_text
+
+    def check_word_mistake(self, user_text, correct_text):
+        import difflib
+        u_words = user_text.split()
+        c_words = correct_text.split()
+        matcher = difflib.SequenceMatcher(None, u_words, c_words)
+        analysis = []
+        # Analizuje różnice wyraz po wyrazie dla trybu Fill the Gaps
+        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+            if tag == 'equal':
+                for w in c_words[j1:j2]:
+                    analysis.append((w + " ", True))
+            elif tag in ('replace', 'insert'):
+                for w in c_words[j1:j2]:
+                    analysis.append((w + " ", False))
+        return analysis
